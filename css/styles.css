@@ -210,7 +210,8 @@ h6.green {
     max-width: 350px;
     display: flex;
     flex-flow: column;
-    align-items: center
+    align-items: center;
+    max-height: 450px;
 }
 
 
@@ -231,20 +232,8 @@ h6.green {
     margin-bottom: 50px;
 }
 
-/* .services_items ul li div:hover {
-    background-image: url("../assets/services_circle_orange.png");
-} */
-
 .services_items ul li div {
     position: relative;
-}
-
-.services_items ul li div::before {
-    content: url(../assets/services_circle_green.png);
-    position: relative;
-    bottom: 0;
-    left: 0;
-    width: 100%;
 }
 
 .services_items ul li div:hover {
@@ -253,4 +242,49 @@ h6.green {
     bottom: 0;
     left: 0;
     transition: all 0.4s;
+    z-index: 1;
+}
+
+.services_items ul li:nth-child(1) div::before {
+    content: url(../assets/design_triangle_left.png);
+    position: absolute;
+    bottom: 30%;
+    left: 30%;
+    width: 100%;
+    z-index: 2;
+} 
+
+/* about_me styles */
+.about_me {
+    height: 940px;
+    display: flex;
+    flex-flow: column;
+    background-color: #f2f0e9;
+}
+
+.about_me h2 {
+    font-family: "Merriweather", sans-serif;
+    color: #000;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 48px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.about_me .about_me_text {
+    margin-bottom: 100px;
+    text-align: center;
+}
+
+.about_me_items {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.about_me_items div {
+    display: flex;
+    max-width: 360px;
 }
