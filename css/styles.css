@@ -159,7 +159,7 @@ h6.green {
     justify-content: space-between;
 }
   
-  .hero .btn_container button {
+.hero .btn_container button {
     margin: 5px;
 }
 
@@ -200,13 +200,19 @@ h6.green {
 .services_items ul {
     list-style: none;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    padding-left: 0;
+    flex-wrap: wrap;
 }
 
 .services_items ul li {
-    width: 350px;
-    justify-content: center;
+    width: 100%;
+    max-width: 350px;
+    display: flex;
+    flex-flow: column;
+    align-items: center
 }
+
 
 .services_items ul li h3 {
     font-size: 24px;
@@ -223,4 +229,28 @@ h6.green {
     line-height: 24px;
     color: #000;
     margin-bottom: 50px;
+}
+
+/* .services_items ul li div:hover {
+    background-image: url("../assets/services_circle_orange.png");
+} */
+
+.services_items ul li div {
+    position: relative;
+}
+
+.services_items ul li div::before {
+    content: url(../assets/services_circle_green.png);
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.services_items ul li div:hover {
+    content: url(../assets/services_circle_orange.png);
+    position: relative;
+    bottom: 0;
+    left: 0;
+    transition: all 0.4s;
 }
