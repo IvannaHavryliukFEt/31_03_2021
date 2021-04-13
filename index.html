@@ -11,6 +11,27 @@
     <title>Portfolio app</title>
 </head>
 <body>
+  <div class="modal">
+    <header>
+      <h2 class="contact_label">Contact me</h2>
+      <button onclick="closeModal()"><img src="../portfolio_app_ivanna/assets/modal_close_icon.png" alt=""></button>
+    </header>
+    <ul class="contact_section">
+      <li class="contact_text">
+        <p class="first_line">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil enim incidunt debitis</p>
+        <p class="second_line">deleniti quo nam ad iste sequi, ratione magni minus. Veniam maxime ad modi aliquam beatae dolore, voluptas quis quibusdam optio.</p>
+      </li>
+      <li class="contact_form">
+        <form action="" method="POST">
+          <input type="text" name="name" placeholder="Your name"><br>
+          <input type="email" name="email" placeholder="Your email address"><br>
+          <textarea name="message" id="form_message" cols="30" rows="6" placeholder="Your message"></textarea>
+          <input type="button" class="btn_default btn_orange">Submit
+        </form>
+      </li>
+    </ul>
+    <button class="btn_default btn_orange">Submit</button>
+  </div>
     <section class="hero">
         <header>
           <div class="logo"><a href="#">John Freelancer</a></div>
@@ -31,47 +52,51 @@
         </h1>
         <div class="btn_container">
           <button class="btn_default btn_white">learn more</button>
-          <button class="btn_default btn_orange">contact me</button>
+          <button class="btn_default btn_orange" id="btnContact">contact me</button>
         </div>
       </section>
       <section class="services">
           <header>
-              <h2 class="services_title">My Services</h2>
-              <h6 class="green services_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h6>
+              <h2 class="services_section_title">My Services</h2>
+              <h6 class="green services_section_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h6>
           </header>
-          <div class="services_items">
-            <ul>
+            <ul class="services_items">
                 <li>
-                    <div><img src="../portfolio_app_ivanna/assets/services_circle_green.png" alt=""></div>
-                    <h3>Graphic Design</h3>
-                    <p>Suspendisse et quam id mauris pulvinar elementum. Donec blandit</p>
+                    <div class="services_icon"><img src="../portfolio_app_ivanna/assets/design_triangle.png" alt=""></div>
+                    <h3 class="services_title">Graphic Design</h3>
+                    <p class="services_description">Suspendisse et quam id mauris pulvinar elementum. Donec blandit</p>
                     <button class="btn_default btn_green">learn more</button>
                 </li>
                 <li>
-                    <div><img src="../portfolio_app_ivanna/assets/services_circle_green.png" alt=""></div>
-                    <h3>Web Development</h3>
-                    <p>Suspendisse et quam id mauris pulvinar elementum. Donec blandit</p>
+                    <div class="services_icon"><img src="../portfolio_app_ivanna/assets/development_triangle.png" alt=""></div>
+                    <h3 class="services_title">Web Development</h3>
+                    <p class="services_description">Suspendisse et quam id mauris pulvinar elementum. Donec blandit</p>
                     <button class="btn_default btn_green">learn more</button>
                 </li>
                 <li>
-                   <div><img src="../portfolio_app_ivanna/assets/services_circle_green.png" alt=""></div>
-                   <h3>Research</h3>
-                   <p>Suspendisse et quam id mauris pulvinar elementum. Donec blandit</p>
+                   <div class="services_icon"><img src="../portfolio_app_ivanna/assets/research_triangle.png" alt=""></div>
+                   <h3 class="services_title">Research</h3>
+                   <p class="services_description">Suspendisse et quam id mauris pulvinar elementum. Donec blandit</p>
                    <button class="btn_default btn_green">learn more</button>
                 </li>
             </ul>
-          </div>
       </section>
       <section class="about_me">
         <header>
             <h2 class="about_me_title">About Me</h2>
             <h6 class="green about_me_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h6>
         </header>
-        <div class="about_me_items">
-          <div class="me_section">John Freelancer</div>
-          <div class="article article_1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui</div>
-          <div class="article article_2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui</div>
-        </div>
+        <ul class="about_me_items">
+          <li class="me_section">
+            <img class="me_icon" src="../portfolio_app_ivanna/assets/me_photo.png" alt="my photo">
+            <h3 class="me_name">John Freelancer</h3>
+            <p class="me_job"><i>Graphic Designer / Web Developer</i></p>
+            <p class="green me_logo">@Johnfreelancer</p>
+          </li>
+          <li class="article article_1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui</li>
+          <li class="article article_2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui</li>
+      </ul>
     </section>
+    <script src="./js/script.js"></script>
 </body>
 </html>
